@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
@@ -14,7 +15,7 @@
         <ul class="site-navigation">
           <li><a href="info.html">Информация</a></li>
           <li><a href="media.html">Фото и видео</a></li>
-          <li><a class="main-header-logo"><img src="img/header-logo.svg" width="15" height="15" alt="Логотип Седоны"></a></li>
+          <li><a class="main-header-logo"><img src="img/logo.png" width="138" height="70" alt="Логотип Седоны"></a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
@@ -28,16 +29,11 @@
 
       <h1 class="visually-hidden">Седона</h1>
 
-      <section class="greeting">
+      <img src="img/welcome-text.jpg" width="1200" height="565" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
 
-        <!--Welcome - to the gorgeous - Sedona "Because the Grand Canyon sucks"-->
-        <img src="img/welcome-text.svg" width="15" height="15" alt="Добро пожаловать!">
-
-        <p>
-          <b>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</b>
-        </p>
-
-      </section>
+      <p>
+        <b>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</b>
+      </p>
 
       <section class="features">
 
@@ -53,7 +49,7 @@
             <p>&mdash; №1 &mdash;</p>
             <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
 
-            <img src="img/picture.jpg" width="15" height="15" alt="Пейзаж">
+            <img src="img/1st-reason.jpg" width="800" height="256" alt="">
 
             <ul class="services-list">
               <li class="service-item">
@@ -78,7 +74,7 @@
             <h3>Там есть Мост Дьявола</h3>
             <p>&mdash; №2 &mdash;</p>
             <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
-            <img src="img/devils-bridge.jpg" width="15" height="15" alt="Мост Дьявола">
+            <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост Дьявола">
           </li>
 
           <!-- 3rd feature -->
@@ -115,22 +111,22 @@
           Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне
         </p>
 
-        <div class="modal">
+        <button class="modal-button active" type="button">Поиск гостиницы в Седоне</button>
 
-          <h4 class="modal-title active">Поиск гостиницы в Седоне</h4>
+        <div class="modal">
 
           <form class="search-form" action="https://htmlacademy.ru" method="get">
 
             <p>
               <label for="arrival-date-field">Дата заезда:</label>
               <input id="arrival-date-field" class="arrival-date" type="text" name="arrival-date" value="24 апреля 2017">
-              <img src="img/calendar.svg" width="5" height="5" alt="Дата заезда">
+              <img src="img/calendar.svg" width="21" height="22" alt="Дата заезда">
             </p>
 
             <p>
               <label for="departure-date-field">Дата выезда:</label>
               <input id="departure-date-field" class="departure-date" type="text" name="departure-date" value="4 июля 2017">
-              <img src="img/calendar.svg" width="5" height="5" alt="Дата выезда">
+              <img src="img/calendar.svg" width="21" height="22" alt="Дата выезда">
             </p>
 
             <p>
@@ -156,7 +152,7 @@
 
         <h2 class="visually-hidden">Карта</h2>
 
-        <img src="img/map.png" width="15" height="15" alt="Седона на карте">
+        <img src="img/map.jpg" width="1200" height="474" alt="Седона на карте">
 
       </section>
 
@@ -177,7 +173,7 @@
       </ul>
 
       <p class="footer-copyright">
-        website by <a href="#"><img src="img/htmlacademy-logo.svg" width="15" height="15" alt="html academy"></a>
+        website by <a href="#"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип html academy"></a>
       </p>
 
     </footer>
