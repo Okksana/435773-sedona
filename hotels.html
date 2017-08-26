@@ -82,14 +82,16 @@
             <legend>Стоимость в сутки (р):</legend>
 
             <p class="output-area">
-              <span class="left-output">от 0</span> &#166; <span class="right-output">до 3000</span>
+              <label for="min-value" class="visually-hidden">Минимальная стоимость</label>
+              <input id="min-value" class="output left" type="text" name="min" placeholder="от 0" value="">
+              &#166;
+              <label for="max-value" class="visually-hidden">Максимальная стоимость</label>
+              <input id="max-value" class="output right" type="text" name="max" placeholder="до 3000" value="">
             </p>
 
-            <span class="visually-hidden">Стоимость из диапазона</span>
-            <div class="range-filter" tabindex="0">
-              <!-- Scale with two markers --> 
-              ----------
-            </div>
+            <div class="range-marker left" tabindex="0">Минимальная стоимость</div>
+            <div class="range-filter"><!-- Scale -->----------</div>
+            <div class="range-marker right" tabindex="0">Максимальная стоимость</div>
 
            </fieldset>
 
