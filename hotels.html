@@ -41,16 +41,16 @@
 
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" checked>
-                Бассейн
+                <input id="pool-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="pool" checked>
+                <label for="pool-filter">Бассейн</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking-place">
-                Парковка
+                <input id="parking-place-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="parking-place">
+                <label for="parking-place-filter">Парковка</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi">
-                Wi-fi
+                <input id="wi-fi-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi">
+                <label="wi-fi-filter">Wi-fi</label>
               </li>
             </ul>
 
@@ -62,16 +62,16 @@
 
             <ul>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" checked>
-                Гостиница
+                <input id="hotel-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="hotel" checked>
+                <label for="hotel-filter">Гостиница</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" checked>
-                Мотель
+                <input id="motel-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="motel" checked>
+                <label for="motel-filter">Мотель</label>
               </li>
               <li class="filter-option">
-                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" checked>
-                Апартаменты
+                <input id="apartments-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="apartments" checked>
+                <label for="apartments-filter">Апартаменты</label>
               </li>
             </ul>
 
@@ -79,12 +79,15 @@
 
           <fieldset>
 
-            <legend>Стоимость в сутки (Р):</legend>
+            <legend>Стоимость в сутки (р):</legend>
 
-            <span class="left-output">от 0</span> <span class="right-output">до 3000</span><br>
+            <p class="output-area">
+              <span class="left-output">от 0</span> &#166; <span class="right-output">до 3000</span>
+            </p>
 
-            <div class="filter-range">
-              <!-- Scale with two markers -->
+            <span class="visually-hidden">Стоимость из диапазона</span>
+            <div class="range-filter" tabindex="0">
+              <!-- Scale with two markers --> 
               ----------
             </div>
 
@@ -100,7 +103,7 @@
 
         <h2 class="visually-hidden">Список мест проживания</h2>
 
-        <span><b>Найдено: 3</b></span>
+        <span class="result-of-search"><b>Найдено: 3</b></span>
 
         <h3>Сортировка:</h3>
 
@@ -111,8 +114,8 @@
         </ul>
 
         <ul class="sorting-degree-list">
-          <li class="sorting-degree-item"><a class="arrow-top" href="#">Вверх</a></li>
-          <li class="sorting-degree-item"><a class="sorting-degree-list-current arrow-bottom">Вниз</a></li>
+          <li class="sorting-degree-item"><a class="arrow-top" href="#">по возрастанию</a></li>
+          <li class="sorting-degree-item"><a class="sorting-degree-list-current arrow-bottom">по убыванию</a></li>
         </ul>
 
         <ul class="catalog-list">
@@ -160,7 +163,7 @@
     <footer class="main-footer">
 
       <p class="footer-contacts">
-        #VisitSedona
+        <b>#VisitSedona</b>
       </p>
 
       <ul class="footer-social">
@@ -170,7 +173,7 @@
       </ul>
 
       <p class="footer-copyright">
-        website by <a href="#"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип html academy"></a>
+        website by <a href="https://htmlacademy.ru/intensive/htmlcss"><img src="img/logo-htmlacademy.svg" width="115" height="41" alt="Логотип html academy"></a>
       </p>
 
     </footer>
