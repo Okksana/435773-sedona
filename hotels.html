@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Гостиницы</title>
     <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
 
@@ -17,7 +18,7 @@
           <li><a href="media.html">Фото и видео</a></li>
           <li><a class="main-header-logo" href="index.html"><img src="img/logo.png" width="138" height="70" alt="Логотип Седоны"></a></li>
           <li><a href="map.html">Карта штата</a></li>
-          <li><a class="site-navigation-current">Гостиницы</a></li>
+          <li class="site-navigation-current"><a>Гостиницы</a></li>
         </ul>
 
       </nav>
@@ -50,7 +51,7 @@
               </li>
               <li class="filter-option">
                 <input id="wi-fi-filter" class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="wi-fi">
-                <label="wi-fi-filter">Wi-fi</label>
+                <label for="wi-fi-filter">Wi-fi</label>
               </li>
             </ul>
 
@@ -81,17 +82,23 @@
 
             <legend>Стоимость в сутки (р):</legend>
 
-            <p class="output-area">
+            <p class="filter-output">
+              <input id="min-value" class="output-min filter-input" type="text" name="min" placeholder="от 0" value="">
               <label for="min-value" class="visually-hidden">Минимальная стоимость</label>
-              <input id="min-value" class="output left" type="text" name="min" placeholder="от 0" value="">
-              &#166;
+              <span>&#166;</span>
+              <input id="max-value" class="output-max filter-input" type="text" name="max" placeholder="до 3000" value="">
               <label for="max-value" class="visually-hidden">Максимальная стоимость</label>
-              <input id="max-value" class="output right" type="text" name="max" placeholder="до 3000" value="">
             </p>
 
-            <div class="range-marker left" tabindex="0">Минимальная стоимость</div>
-            <div class="range-filter"><!-- Scale -->----------</div>
-            <div class="range-marker right" tabindex="0">Максимальная стоимость</div>
+            <div class="filter-marker filter-marker-min" tabindex="0">
+              <span class="visually-hidden">Минимальная стоимость</span>
+              <img src="img/filter-button.svg" width="20" height="22" alt="Минимальная стоимость">
+            </div>
+            <div class="filter-range"><!-- Scale -->----------</div>
+            <div class="filter-marker filter-marker-max" tabindex="0">
+              <span class="visually-hidden">Максимальная стоимость</span>
+              <img src="img/filter-button.svg" width="20" height="22" alt="Максимальная стоимость">
+            </div>
 
            </fieldset>
 
@@ -105,19 +112,19 @@
 
         <h2 class="visually-hidden">Список мест проживания</h2>
 
-        <span class="result-of-search"><b>Найдено: 3</b></span>
+        <span class="results-of-search"><b>Найдено: 3</b></span>
 
         <h3>Сортировка:</h3>
 
-        <ul class="sorting-category-list">
-          <li class="sorting-category-item"><a class="sorting-category-list-current">по цене</a></li>
-          <li class="sorting-category-item"><a href="#">по типу</a></li>
-          <li class="sorting-category-item"><a href="#">по рейтингу</a></li>
+        <ul class="sorting-type">
+          <li class="sorting-type-item sorting-type-item-current"><a>по цене</a></li>
+          <li class="sorting-type-item"><a href="#">по типу</a></li>
+          <li class="sorting-type-item"><a href="#">по рейтингу</a></li>
         </ul>
 
-        <ul class="sorting-degree-list">
+        <ul class="sorting-degree">
           <li class="sorting-degree-item"><a class="arrow-top" href="#">по возрастанию</a></li>
-          <li class="sorting-degree-item"><a class="sorting-degree-list-current arrow-bottom">по убыванию</a></li>
+          <li class="sorting-degree-item sorting-degree-item-current"><a class="arrow-bottom">по убыванию</a></li>
         </ul>
 
         <ul class="catalog-list">
@@ -125,33 +132,48 @@
           <li class="catalog-item">
 
             <h4><a href="#">Amara Resort &amp; Spa</a></h4>
-            <img src="img/hotel-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
-            <p>Гостиница от 4000 р.</p>
-            <a class="button info" href="#">Подробнее</a>
-            <a class="button reserve" href="#">Забронировать</a>
-            <p class="rate">Рейтинг: 8,5</p>
+            <p class="catalog-item-img">
+              <img src="img/hotel-1.jpg" width="135" height="90" alt="Гостиница Amara Resort & Spa">
+            </p>
+            <p>
+              <span class="catalog-item-type">Гостиница</span>
+              <span class="catalog-item-price">от 4000 р.</span>
+            </p>
+            <a class="button button-info" href="#">Подробнее</a>
+            <a class="button button-reserve" href="#">Забронировать</a>
+            <p class="catalog-item-rate">Рейтинг: 8,5</p>
 
           </li>
           <!-- 2nd item -->
           <li class="catalog-item">
 
             <h4><a href="#">Desert Quail Inn</a></h4>
-            <img src="img/hotel-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
-            <p>Мотель от 3000 р.</p>
-            <a class="button info" href="#">Подробнее</a>
-            <a class="button reserve" href="#">Забронировать</a>
-            <p class="rate">Рейтинг: 8,9</p>
+            <p class="catalog-item-img">
+              <img src="img/hotel-2.jpg" width="135" height="90" alt="Мотель Desert Quail Inn">
+            </p>
+            <p>
+              <span class="catalog-item-type">Мотель</span>
+              <span class="catalog-item-price">от 3000 р.</span>
+            </p>
+            <a class="button button-info" href="#">Подробнее</a>
+            <a class="button button-reserve" href="#">Забронировать</a>
+            <p class="catalog-item-rate">Рейтинг: 8,9</p>
 
           </li>
           <!-- 3rd item -->
           <li class="catalog-item">
 
             <h4><a href="#">Villas at Poco Diablo</a></h4>
-            <img src="img/hotel-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
-            <p>Апартаменты от 2000 р.</p>
-            <a class="button info" href="#">Подробнее</a>
-            <a class="button reserve" href="#">Забронировать</a>
-            <p class="rate">Рейтинг: 9,2</p>
+            <p class="catalog-item-img">
+              <img src="img/hotel-3.jpg" width="135" height="90" alt="Апартаменты Villas at Poco Diablo">
+            </p>
+            <p>
+              <span class="catalog-item-type">Апартаменты</span>
+              <span class="catalog-item-price">от 2000 р.</span>
+            </p>
+            <a class="button button-info" href="#">Подробнее</a>
+            <a class="button button-reserve" href="#">Забронировать</a>
+            <p class="catalog-item-rate">Рейтинг: 9,2</p>
 
           </li>
         </ul>

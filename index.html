@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Седона</title>
     <!-- Stylesheets -->
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
     <link type="text/css" rel="stylesheet" href="css/style.css">
   </head>
 
@@ -29,27 +30,34 @@
 
       <h1 class="visually-hidden">Седона</h1>
 
-      <img src="img/welcome-text.jpg" width="1200" height="565" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+      <p class="welcome-image">
+        <img src="img/welcome-text.jpg" width="1200" height="565" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks!">
+      </p>
 
-      <p>
-        <b>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</b>
+      <p class="welcome-text">
+        <b>
+          Седона &mdash; небольшой городок в Аризоне,<br>
+          заслуживающий большего!
+        </b>
       </p>
 
       <section class="features">
 
         <h2 class="visually-hidden">Преимущества</h2>
 
-        <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
+        <p class="features-text">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</p>
 
         <ul class="features-list">
 
           <!-- 1st feature -->
           <li class="feature-item">
-            <h3>Настоящий городок</h3>
-            <p>&mdash; №1 &mdash;</p>
-            <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
+            <div class="feature-item-wrap">
+              <h3>Настоящий<br>городок</h3>
+              <p>&mdash; №1 &mdash;</p>
+              <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь</p>
+            </div> 
 
-            <img src="img/1st-reason.jpg" width="800" height="256" alt="">
+            <img src="img/1st-reason.jpg" width="800" height="256" alt="Седона - небольшой городок в штате Аризона.">
 
             <ul class="services-list">
               <li class="service-item">
@@ -71,29 +79,31 @@
 
           <!-- 2nd feature -->
           <li class="feature-item">
-            <h3>Там есть Мост Дьявола</h3>
-            <p>&mdash; №2 &mdash;</p>
-            <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+            <div class="feature-item-wrap">
+              <h3>Там есть<br>Мост Дьявола</h3>
+              <p>&mdash; №2 &mdash;</p>
+              <p>Да, по нему можно пройти! Если конечно Вы осмелитесь</p>
+            </div>
             <img src="img/devils-bridge.jpg" width="800" height="256" alt="Мост Дьявола">
           </li>
 
           <!-- 3rd feature -->
           <li class="feature-item">
-            <h3>Небольшая площадь</h3>
+            <h3>Небольшая<br>площадь</h3>
             <p>&mdash; №3 &mdash;</p>
             <p>Все достопримечательности находятся очень близко</p>
           </li>
 
           <!-- 4th feature -->
           <li class="feature-item">
-            <h3>Красивая дорога</h3>
+            <h3>Красивая<br>дорога</h3>
             <p>&mdash; №4 &mdash;</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
 
           <!-- 5th feature -->
           <li class="feature-item">
-            <h3>Мало туристов</h3>
+            <h3>Мало<br>туристов</h3>
             <p>&mdash; №5 &mdash;</p>
             <p>Большинство едет в Гранд Каньон и толпится там</p>
           </li>
@@ -107,41 +117,59 @@
         <h2 class="visually-hidden">Поиск гостиниц</h2>
 
         <h3>Заинтересовались?</h3>
-        <p>
-          Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне
+        <p class="search-text">
+          Укажите предполагаемые даты поездки,
+          <br>
+          и мы покажем Вам лучшие предложения гостиниц в Седоне
         </p>
 
-        <a class="modal-button active" href="#">Поиск гостиницы в Седоне</a>
+        <a class="button modal-button active" href="#">Поиск гостиницы в Седоне</a>
 
         <div class="modal">
 
           <form class="search-form" action="https://htmlacademy.ru" method="get">
 
-            <p>
+            <p class="search-item">
               <label for="arrival-date-field">Дата заезда:</label>
-              <input id="arrival-date-field" class="arrival-date" type="text" name="arrival-date" placeholder="24 апреля 2017" value="">
-              <button class="calendar-button" type="button"><img src="img/calendar.svg" width="21" height="22" alt="Дата заезда"></button>
+              <input id="arrival-date-field" type="text" name="arrival-date" value="" placeholder="24 апреля 2017">
+              <button class="calendar" type="button">
+                <span class="visually-hidden">Выбрать дату заезда</span>
+                <img src="img/calendar.svg" width="21" height="22" alt="Дата заезда">
+              </button>
             </p>
 
-            <p>
+            <p class="search-item">
               <label for="departure-date-field">Дата выезда:</label>
-              <input id="departure-date-field" class="departure-date" type="text" name="departure-date" placeholder="4 июля 2017" value="">
-              <button class="calendar-button" type="button"><img src="img/calendar.svg" width="21" height="22" alt="Дата выезда"></button>
+              <input id="departure-date-field" type="text" name="departure-date" value="" placeholder="4 июля 2017">
+              <button class="calendar" type="button">
+                <span class="visually-hidden">Выбрать дату выезда</span>
+                <img src="img/calendar.svg" width="21" height="22" alt="Дата выезда">
+              </button>
             </p>
 
-            <p>
+            <p class="search-item">
               <label for="adults-field">Взрослые:</label>
-              <button class="button minus" type="button"><span class="visually-hidden">Уменьшить количество</span>-</button>
-              <input id="adults-field" class="adults" type="text" name="adults" placeholder="2" value="">
-              <button class="button plus" type="button"><span class="visually-hidden">Увеличить количество</span>+</button>
+              <button class="crease" type="button">
+                <span class="visually-hidden">Уменьшить количество</span>-
+              </button>
+              <input id="adults-field" type="text" name="adults" value="" placeholder="2">
+              <button class="crease" type="button">
+                <span class="visually-hidden">Увеличить количество</span>+
+              </button>
 
               <label for="children-field">Дети:</label>
-              <button class="button minus" type="button"><span class="visually-hidden">Уменьшить количество</span>-</button>
-              <input id="children-field" class="children" type="text" name="children" placeholder="0" value="">
-              <button class="button plus" type="button"><span class="visually-hidden">Увеличить количество</span>+</button>
+
+              <button class="crease" type="button">
+                <span class="visually-hidden">Уменьшить количество</span>-
+              </button>
+              <input id="children-field" type="text" name="children" value="" placeholder="0">
+              <button class="crease" type="button">
+                <span class="visually-hidden">Увеличить количество</span>+
+              </button>
+
             </p>
 
-            <button class="button" type="submit">Найти</button>
+            <button class="button search-button" type="submit">Найти</button>
 
           </form>
         </div>
