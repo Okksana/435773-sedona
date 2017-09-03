@@ -1,29 +1,31 @@
-/* 0.0 Fonts import
---------------------------------------------------*/
-@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic");
-
 /* 1.0 Base Settings
 --------------------------------------------------*/
-html {
+html, 
+body {
   background-color: rgba(242, 242, 242, 1);
   }
 
 body {
-/* Preview
-----------------*/
-/*margin: 0 auto;
-  width: 1200px;
-  padding: 0;*/
-
   font-size: 14px;
   font-weight: normal;
   font-family: "PT Sans", "Arial", "Trebuchet MS", sans-serif;
   line-height: 21px;
   text-transform: uppercase;
   color: rgba(51, 51, 51, 1);
+  }
+
+.shadow-wrapper {
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 1200px;
 
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+  }
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
   }
 
 /* Links */
@@ -42,7 +44,7 @@ a {
   color: rgba(255, 255, 255, 1);
 
   background-color: rgba(129, 179, 210, 1);
-  border: none;
+  border: 0;
   }
 
 .button:hover, 
@@ -56,6 +58,21 @@ a {
   }
 
 /* Main navigation */
+.main-header .container {
+  position: relative;
+  padding-right: 72px;
+  padding-left: 72px;
+  }
+
+.main-header-logo {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 50%;
+  margin-left: -69px;
+  }
+
 .main-navigation {
   font-weight: bold;
   line-height: 26px;
@@ -65,10 +82,26 @@ a {
   }
 
 .site-navigation {
+  display: flex;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
+  }
 
-  text-align: center;
-  vertical-align: middle;
+.site-navigation li {
+  width: 240px;
+  }
+
+.site-navigation li:nth-child(2) {
+  margin-right: auto;
+  }
+
+.site-navigation li:nth-child(3), 
+.site-navigation li:nth-child(4) {
+  text-align: right;
   }
 
 .site-navigation a {
@@ -86,16 +119,21 @@ a {
 
 .site-navigation-current a,
 .site-navigation-current a:hover,
-.site-navigation-current a:focus {
+.site-navigation-current a:focus,
+.site-navigation-current a:active {
   color: rgba(118, 99, 87, 1);
   }
 
 /* Main */
 .welcome-image {
+  margin: 0 0 60px 0;
+
   text-align: center;
   }
 
 .welcome-text {
+  margin: 0 0 34px 0;
+
   font-size: 21px;
   line-height: 26px;
   text-align: center;
@@ -103,41 +141,95 @@ a {
   }
 
 /* Features */
+.features {
+  margin-bottom: 55px;
+  }
+
 .features-text {
+  margin: 0 0 54px 0;
+
   line-height: 26px;
   text-align: center;
   }
 
 .features-list, 
 .services-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
   list-style: none;
   }
 
+.features-list {
+  flex-wrap: wrap;
+  }
+
 .feature-item {
+  width: 400px;
+
   text-align: center;
 
   background-color: rgba(238, 238, 238, 1);
   }
 
+.service-item {
+  width: 256px;
+  padding: 50px 72px;
+  }
+
+.service-item::before {
+  content: "";
+  display: block;
+  margin: 0 auto 30px auto;
+  width: 75px;
+  height: 72px;
+  outline: 1px dashed aquamarine;
+  }
+
 .feature-item h3, 
 .service-item h3 {
+  margin: 0;
+
   font-size: 21px;
   font-weight: bold;
   line-height: 21px;
   color: rgba(0, 0, 0, 1);
   }
 
-.feature-item-wrap {
+.feature-item-wrapper {
+  padding: 50px 72px;
+  height: 156px;
+
+  color: rgba(255, 255, 255, 1);
+
   background-color: rgba(129, 179, 210, 1);
   }
 
-.feature-item-wrap, 
-.feature-item-wrap h3 {
+.feature-item-wrapper h3 {
   color: rgba(255, 255, 255, 1);
+  }
+
+.feature-item:nth-child(2), 
+.feature-item:nth-child(5) {
+  width: 800px;
+  }
+
+.feature-item:nth-child(3) {
+  width: 1200px;
+  }
+
+.feature-item:nth-child(6), 
+.feature-item:nth-child(7), 
+.feature-item:nth-child(8) {
+  width: 256px;
+  padding: 50px 72px;
   }
 
 /* Search */
 .search h3 {
+  margin: 0 0 25px 0;
+
   font-size: 30px;
   font-weight: bold;
   line-height: 36px;
@@ -146,11 +238,20 @@ a {
   }
 
 .search-text {
+  margin: 0 0 50px 0;
+
   line-height: 24px;
   text-align: center;
   }
 
 .modal-button {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 568px;
+  padding-top: 31px;
+  padding-bottom: 31px;
+
   font-size: 21px;
   line-height: 26px;
 
@@ -169,10 +270,18 @@ a {
   }
 
 .modal {
-  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  width: 568px;
+  padding: 55px;
+/*position: absolute;*/
 
   background-color: rgba(255, 255, 255, 1);
   box-shadow: 0 7px 15px rgba(0, 0, 0, 0.15);
+  }
+
+.search-item {
+  margin: 0 0 30px 0;
   }
 
 .search-item label {
@@ -210,7 +319,7 @@ a {
   vertical-align: middle;
   color: rgba(202, 202, 202, 1);
 
-  border: none;
+  border: 0;
   cursor: pointer;
   }
 
@@ -235,6 +344,12 @@ a {
   }
 
 .search-button {
+  display: block;
+  margin-top: 55px;
+  width: 100%;
+  padding-top: 17px;
+  padding-bottom: 17px;
+
   font-size: 21px;
   font-weight: bold;
   line-height: 26px;
@@ -246,17 +361,35 @@ a {
   }
 
 /* Filters */
-.filters {
-  color: rgba(255, 255, 255, 1);
+.filters .container {
+  padding: 30px 72px;
 
   background-color: rgba(76, 86, 93, 1);
   background-image: url("../img/top-pic-hotels.jpg");
   background-position: center top;
   background-repeat: no-repeat;
+  background-size: cover;
+  }
+
+.filters {
+  color: rgba(255, 255, 255, 1);
+  }
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
   }
 
 .filter fieldset {
-  border: none;
+  width: 240px;
+  padding: 0;
+  border: 0;
+  }
+
+.filter fieldset:nth-child(3) {
+  width: 336px;
+  margin-left: 230px;
   }
 
 .filter legend {
@@ -265,6 +398,8 @@ a {
   }
 
 .filter ul {
+  margin: 0;
+  padding: 0;
   list-style: none;
   }
 
@@ -294,7 +429,12 @@ a {
   color: rgba(255, 255, 255, 1);
 
   background-color: rgba(255, 255, 255, 0);
-  border: none;
+  border: 0;
+  }
+
+.filter-marker, 
+.filter-range {
+  display: inline-block;
   }
 
 .filter-marker {
@@ -302,6 +442,8 @@ a {
   }
 
 .filter-button {
+  margin-right: 95px;
+
   font-weight: normal;
 
   background-color: rgba(255, 255, 255, 0);
@@ -320,13 +462,24 @@ a {
   }
 
 /* Sorting */
+.sorting {
+  padding-right: 72px;
+  padding-left: 72px;
+  display: flex;
+  align-items: center;
+  }
+
 .results-of-search {
+  width: 135px;
+  margin-right: 30px;
+
   font-size: 21px;
   line-height: 26px;
   color: rgba(0, 0, 0, 1);
   }
 
 .catalog h3 {
+  margin-right: 40px;
   font-size: 12px;
   font-weight: normal;
   line-height: 18px;
@@ -336,11 +489,30 @@ a {
 
 .sorting-type, 
 .sorting-degree {
+  margin: 0;
+  padding: 0;
   list-style: none;
 
   font-size: 12px;
   line-height: 18px;
   color: rgba(0, 0, 0, 0.3);
+  }
+
+.sorting-degree {
+  margin-left: auto;
+  }
+
+.sorting-type-item, 
+.sorting-degree-item {
+  display: inline-block;
+  }
+
+.sorting-type-item {
+  margin-right: 30px;
+  }
+
+.sorting-degree-item:first-child {
+  margin-right: 10px;
   }
 
 .sorting-type-item a {
@@ -368,10 +540,6 @@ a {
   border-bottom-width: 0;
   }
 
-.sorting-degree {
-  text-align: right;
-  }
-
 .sorting-degree-item a {
   color: rgba(0, 0, 0, 0.3);
   }
@@ -389,10 +557,34 @@ a {
 
 /* Catalog */
 .catalog-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
   }
 
+.catalog-item {
+  display: flex;
+  align-items: center;
+  padding: 30px 72px;
+
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: rgba(229, 229, 229, 1);
+  }
+
+.catalog-item:last-child {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(229, 229, 229, 1);
+  }
+
+.catalog-item-img {
+  order: -1;
+  margin: 0 30px 0 0;
+  }
+
 .catalog-item h4 {
+  margin: 0;
   font-size: 21px;
   line-height: 26px;
 
@@ -426,6 +618,7 @@ a {
   }
 
 .catalog-item-rate {
+  margin-left: auto;
   text-align: right;
 
   background-color: rgba(242, 242, 242, 1);
@@ -436,16 +629,30 @@ a {
   color: rgba(0, 0, 0, 1);  
   }
 
-.footer-contacts {
-  font-size: 21px;
-  line-height: 26px;
+.main-footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 72px;
+  }
+
+.footer-contacts,
+.footer-social,
+.footer-copyright {
+  margin: 0;
+  width: 240px;
+
   text-align: center;
   }
 
-.footer-social {
-  list-style: none;
+.footer-contacts {
+  font-size: 21px;
+  line-height: 26px;
+  }
 
-  text-align: center;
+.footer-social {
+  padding: 0;
+  list-style: none;
   }
 
 .social-button {
@@ -465,10 +672,6 @@ a {
   background-color: rgba(84, 150, 189, 1);
   }
 
-.footer-copyright {
-  text-align: center;
-  }
-
 .footer-copyright a {
   color: rgba(35, 31, 32, 1);
   }
@@ -480,6 +683,10 @@ a {
 
 .footer-copyright a:active {
   color: rgba(189, 187, 188, 1);
+  }
+
+.footer-copyright img {
+  vertical-align: middle;
   }
 
 /*---------- 2.0 Visually hidden objects ----------*/

@@ -32,6 +32,7 @@ html, body {
  */
 
 footer,
+main,
 header,
 nav,
 section {
@@ -150,6 +151,7 @@ sup {
  */
 
 img {
+  margin-bottom: -6px;
   border-style: none;
 }
 
@@ -161,10 +163,10 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-svg {
+/*svg {
   fill: currentColor;
   stroke: currentColor;
-  }
+  }*/
 
 /* Forms
    ========================================================================== */
