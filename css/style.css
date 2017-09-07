@@ -338,6 +338,7 @@ a {
   box-sizing: border-box;
   margin-left: auto;
   width: 346px;
+  height: 38px;
   padding: 4px 12px;
 
   font-size: inherit;
@@ -382,8 +383,9 @@ a {
 
 .calendar {
   position: absolute;
-  top: 7px;
+  top: 50%;
   right: 15px;
+  margin-top: -12px;
   width: 21px;
   height: 21px;
   background: none;
@@ -461,6 +463,7 @@ a {
   }
 
 .filter fieldset:last-child {
+  width: 318px;
   margin-left: auto;
   }
 
