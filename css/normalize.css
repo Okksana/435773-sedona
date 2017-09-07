@@ -152,6 +152,8 @@ sup {
 
 img {
   margin-bottom: -6px;
+  max-width: 100%;
+  height: auto;
   border-style: none;
 }
 
@@ -163,10 +165,11 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-/*svg {
+svg {
   fill: currentColor;
   stroke: currentColor;
-  }*/
+  stroke-width: 0;
+  }
 
 /* Forms
    ========================================================================== */
