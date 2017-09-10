@@ -222,7 +222,7 @@ a {
 .feature-item h3, 
 .service-item h3 {
   margin: 0 auto 24px auto;
-  width: 170px;
+  width: 160px;
 
   font-size: 21px;
   font-weight: bold;
@@ -937,16 +937,11 @@ catalog-item-img img {
   padding: 35px 72px;
   }
 
-.footer-contacts,
-.footer-copyright {
-  margin: 0;
-  width: 240px;
-
-  text-align: center;
-  }
-
 .footer-contacts {
+  margin: 0;
+  width: 180px;
   padding-top: 10px;
+  padding-left: 60px;
 
   font-size: 21px;
   line-height: 26px;
@@ -1004,10 +999,13 @@ catalog-item-img img {
   flex-wrap: wrap;
   justify-content: flex-end;
   align-items: center;
+
+  margin: 0;
+  width: 240px;
   }
 
 .footer-copyright a {
-  margin: 0 30px 0 8px;
+  margin: 0 28px 0 8px;
   width: 115px;
   height: 41px;
 
