@@ -136,7 +136,8 @@ a {
   }
 
 .welcome-text {
-  margin: 0 0 28px 0;
+  margin: 0 auto 28px auto;
+  width: 568px;
 
   font-size: 21px;
   line-height: 26px;
@@ -220,7 +221,8 @@ a {
 
 .feature-item h3, 
 .service-item h3 {
-  margin: 0 0 24px 0;
+  margin: 0 auto 24px auto;
+  width: 170px;
 
   font-size: 21px;
   font-weight: bold;
@@ -270,7 +272,8 @@ a {
   }
 
 .search-text {
-  margin: 0 0 46px 0;
+  margin: 0 auto 46px auto;
+  width: 568px;
 
   line-height: 24px;
   text-align: center;
@@ -508,6 +511,9 @@ a {
   border-radius: 2px;
   }
 
+/* Примечание 1: ------------------------------------------------------------------------------*/
+/* Цвет обводки по умолчанию (голубой) сливается с картинкой-бэкграундом ----------------------*/
+/* При переходе tab'ом на чекбокс доложно быть видно, на каком элементе находится пользователь */
 input[type="checkbox"]:focus + .filter-checkbox {
   outline: 2px solid rgba(255, 215, 0, 0.3);
   }
