@@ -72,6 +72,10 @@ a {
   margin-left: -69px;
   }
 
+.main-header-logo:active {
+  outline: 1px dotted rgba(0, 0, 0, 1);
+  }
+
 .main-navigation {
   font-weight: bold;
   line-height: 26px;
@@ -115,6 +119,7 @@ a {
 
 .site-navigation a:active {
   color: rgba(0, 0, 0, 0.3);
+  outline: none;
   }
 
 .site-navigation-current a,
@@ -503,7 +508,6 @@ a {
   border-radius: 2px;
   }
 
-input[type="checkbox"]:hover + .filter-checkbox, 
 input[type="checkbox"]:focus + .filter-checkbox {
   outline: 2px solid rgba(255, 215, 0, 0.3);
   }
@@ -801,16 +805,16 @@ catalog-item-img img {
   color: rgba(0, 0, 0, 1);
   }
 
-.catalog-item h4 a {
+.catalog-item-caption a {
   color: rgba(0, 0, 0, 1);
   }
 
-.catalog-item h4 a:hover,
-.catalog-item h4 a:focus {
+.catalog-item-caption a:hover,
+.catalog-item-caption a:focus {
   color: rgba(129, 179, 210, 1);
   }
 
-.catalog-item h4 a:active {
+.catalog-item-caption a:active {
   color: rgba(0, 0, 0, 0.3);    
   }
 
