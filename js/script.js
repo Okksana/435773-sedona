@@ -1,4 +1,4 @@
-﻿var modalLink, modalWindow, searchForm, arrival, departure, filterForm, filterLink;
+﻿var modalLink, modalWindow, searchForm, arrival, departure, adults, children, filterForm, filterLink;
 
 modalLink = document.querySelector(".modal-button");
 
@@ -7,6 +7,8 @@ if (modalLink != null) {
   searchForm = modalWindow.querySelector(".search-form");
   arrival = modalWindow.querySelector("[name=arrival-date]");
   departure = modalWindow.querySelector("[name=departure-date]");
+  adults = modalWindow.querySelector("[name=adults]");
+  children = modalWindow.querySelector("[name=children]");
 
     modalWindow.classList.add("modal-hidden");
 
@@ -25,9 +27,9 @@ if (modalLink != null) {
       });
 
     searchForm.addEventListener("submit", function (evt) {
-      if (!arrival.value || !departure.value) {
+      if (!arrival.value || !departure.value || !adults.value || !children.value) {
         evt.preventDefault();
-        alert("Сперва нужно заполнить такие поля: дата заезда, дата выезда!");
+        alert("Сперва нужно заполнить все поля!");
         }
       });
   }

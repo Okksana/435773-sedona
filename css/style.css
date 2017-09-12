@@ -370,7 +370,7 @@ a {
 .modal {
   display: block;
   position: absolute;
-  z-index: 3;
+  z-index: 4;
   left: 50%;
   margin-left: -284px;
   -webkit-box-sizing: border-box;
@@ -516,6 +516,8 @@ a {
 
 .map {
   position: relative;
+  margin-bottom: -120px;
+
   text-align: center;
   }
 
@@ -1071,10 +1073,8 @@ catalog-item-img img {
   }
 
 .main-footer {
-  color: rgba(0, 0, 0, 1);  
-  }
-
-.main-footer {
+  position: relative;
+  z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1082,6 +1082,10 @@ catalog-item-img img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 35px 72px 32px 72px;
+
+  color: rgba(0, 0, 0, 1);
+
+  background-color: rgba(255, 255, 255, 0.9);
   }
 
 .footer-contacts {
